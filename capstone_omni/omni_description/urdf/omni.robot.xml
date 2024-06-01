@@ -1,0 +1,6 @@
+<Robot name="omni" file="omni.dae">
+  <Manipulator name="arm">
+    <base>base_link</base>
+    <effector>stylus</effector>
+  </Manipulator>
+</Robot>

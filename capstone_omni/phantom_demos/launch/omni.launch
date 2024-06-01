@@ -1,0 +1,23 @@
+<launch>
+    <group ns="phantom">
+        <param name="robot_description" command="$(find xacro)/xacro $(find omni_description)/urdf/omni.xacro" />
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
+        <node name="phantom_node" pkg="phantom_demos" type="phantom_node" output="screen"/>
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find phantom_demos)/rviz/phantom.rviz" required="true" />
+        
+        <node name="scale_tf_node" pkg="phantom_demos" type="scale_tf_node">
+            <param name="input_topic" value="/phantom/pose"/>
+            <param name="output_topic" value="/scaled_pose"/>
+            <param name="scale" value="3.0"/>
+        </node>
+
+        <node name="spring_node" pkg="phantom_demos" type="spring_node" output="screen">
+            <param name="spring_origin_x" value="0.0"/>
+            <param name="spring_origin_y" value="0.0"/>
+            <param name="spring_origin_z" value="0.0"/>
+            <param name="spring_constant" value="0.8"/>
+            <param name="damping_factor" value="0.1"/>
+        </node>
+
+    </group>
+</launch>
