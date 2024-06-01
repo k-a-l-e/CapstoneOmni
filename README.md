@@ -13,7 +13,8 @@ This project is a proof of concept for using a Phantom Omni haptic device in edu
 ## Acknowledgements
 The following instructions based on the [Install instructions](https://github.com/jhu-cisst-external/phantom-omni-1394-drivers?tab=readme-ov-file) by Anton Deguet.
 
-The demo code in this repository is based on fsuarez8's example [here](https://github.com/fsuarez6/phantom_omni).
+The demo code in this repository is based on ROS packages developed by the Group of Robots and Intelligent Machines from the Universidad Politécnica de Madrid
+[here](https://github.com/fsuarez6/phantom_omni).
 
 
 
